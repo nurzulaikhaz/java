@@ -1,11 +1,10 @@
-package org.example.biz;
+package org.example.services;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBiz {
-    public static List<String[]> countAndMatch(ArrayList<String[]> dataList){
-
+public class DataService {
+    public static List<String[]> countAndMatch(List<String[]> dataList) {
         List<String[]> matchingRows = new ArrayList<>();
         for (int i = 0; i < dataList.size(); i++) {
             String[] currentRow = dataList.get(i);
@@ -26,7 +25,7 @@ public class DataBiz {
                 }
             }
         }
-
         return matchingRows;
     }
+
 }

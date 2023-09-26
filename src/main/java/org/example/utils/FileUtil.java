@@ -1,7 +1,5 @@
 package org.example.utils;
 
-import org.example.biz.DataBiz;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -10,7 +8,7 @@ import java.util.ArrayList;
 
 public class FileUtil {
 
-    public static void readCSVFile(String filePath) throws IOException {
+    public static ArrayList<String[]> readCSVFile(String filePath) throws IOException {
         File file = new File(filePath);
         String text;
         ArrayList<String[]> arrayList = new ArrayList<>();
@@ -20,6 +18,6 @@ public class FileUtil {
                 arrayList.add(array);
             }
         }
-        DataBiz.countAndMatch(arrayList);
+        return arrayList;
     }
 }
