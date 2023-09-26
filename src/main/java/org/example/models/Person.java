@@ -20,8 +20,4 @@ public class Person {
         this.ic_num = ic_num;
         this.birthdate = birthdate;
     }
-
-    public Person() {
-
-    }
 }
