@@ -18,6 +18,10 @@ public class MainController {
         this.dataService = new DataService();
     }
 
+    public MainController(FileUtil fileUtil, DataService dataService) {
+
+    }
+
     public void run(String filePath) throws IOException {
         List<Person> data = fileUtil.readCSVFile(filePath);
         dataService.countAndMatch(data);
