@@ -1,10 +1,11 @@
 package org.example.controllers;
 
+import org.example.models.Person;
 import org.example.services.DataService;
 import org.example.utils.FileUtil;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainController {
@@ -18,8 +19,7 @@ public class MainController {
     }
 
     public void run(String filePath) throws IOException {
-        ArrayList<String[]> data = fileUtil.readCSVFile(filePath);
-
+        List<Person> data = fileUtil.readCSVFile(filePath);
         dataService.countAndMatch(data);
     }
 }
